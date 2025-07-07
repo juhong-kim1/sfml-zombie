@@ -33,7 +33,7 @@ void SceneGame::Init()
 
 void SceneGame::Enter()
 {
-	FRAMEWORK.GetWindow().setMouseCursorVisible(true);
+	FRAMEWORK.GetWindow().setMouseCursorVisible(false);
 	sf::Vector2f windowSize = FRAMEWORK.GetWindowSizeF();
 
 	worldView.setSize(windowSize);
@@ -50,7 +50,7 @@ void SceneGame::Enter()
 
 void SceneGame::Exit()
 {
-	FRAMEWORK.GetWindow().setMouseCursorVisible(false);
+	FRAMEWORK.GetWindow().setMouseCursorVisible(true);
 	for (Zombie* zombie : zombieList)
 	{
 		zombie->SetActive(false);
