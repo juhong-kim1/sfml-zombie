@@ -125,14 +125,14 @@ void TileMap::Reset()
 	SetPosition({ 0.f, 0.f });
 }
 
-void TileMap::Update(float dt)
-{
-}
-
 void TileMap::Draw(sf::RenderWindow& window)
 {
 	sf::RenderStates state;
 	state.texture = texture;
 	state.transform = transform;
 	window.draw(va, state);
+}
+
+void TileMap::Update(float dt)
+{
 }
